@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Headland One", serif;
+    font-size: 15px;
+    font-style: normal;
+}
+
+body {
+    background-color: #000000;
+    color: white;
+
+}
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: black; 
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #CB0017; 
+    background-color: rgba(182, 13, 13, 0.7);
+}
+
+/* TOPO DA HEADER QUE É FIXA -----------------------------------------------------*/
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    backdrop-filter: blur(2px);
+}
+
+.barraVermelha {
+    width: 100%;
+    height: 10px;
+    background-color: #CB0017;
+}
+
+.barraBranca {
+    width: 100%;
+    height: 10px;
+    background-color: #FFFFFF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(#000000, transparent);
+    width: 100%;
+    height: 60px;
+    color: white;
+}
+
+.logo {
+    padding-left: 30px;
+    padding-top: 6px;
+}
+
+.textoUl a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.textoUl a:hover {
+    font-size: 1.3rem;
+    transition: .3s;
+}
+
+.textoUl li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.navbar img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.textoUl {
+    width: 800px;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button {
+    background-color: #ffffff00;
+    color: #fff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #CB0017  0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    margin-right: 20px;
+    
+  }
+  
+  .button:hover {
+    background-color: #CB0017;
+    cursor: pointer;
+  }
+  
+  .button svg {
+    align-items: center;
+    width: 1.8em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(5px);
+  }
+
+  .btn-cadastro {
+    width: 140px;
+  }
+  
+  .cadastro {
+    margin: 0 1.0em
+  }
+
+  .login {
+    margin: 0 1.8em
+  }
+  
+  .header-red {
+    color: #CB0017;
+  }
+
+  /* ONDE INICIA  */
+
+/* INICIO DO CARROSEL  */
+.carrossel{
+    /* margin-top: 15vh; */
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.carrosselConteudo{
+    width: 400%;
+    height: 40%;
+    display: flex;
+}
+
+.carrosselConteudo input, .img-desktop{
+    display: none;
+}
+
+.carrosselBox{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.carrosselBox img{
+    width: 100%;
+    height: auto;
+    background-position: top;
+}
+
+.navManual, .navAuto{
+    position: absolute;
+    width: 100%;
+    margin-top: 31%;
+    display: flex;
+    justify-content: center;
+}
+
+.navManual .manualBtn, .navAuto div{
+    border: 1px solid #D72327;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 70px;
+}
+
+.navManual .manualBtn:not(:last-child), .navAuto div:not(:last-child){
+    margin-right: 10px;
+
+}
+
+.navManual .manualBtn:hover{
+    background-color: #D72327;
+}
+
+#radio1:checked ~ .navAuto .autoBtn1, #radio2:checked ~ .navAuto .autoBtn2, #radio3:checked ~ .navAuto .autoBtn3{
+    background-color: #D72327;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
+
+/*  FIM DO CARROSEL --------------------------------- */
+
+
+.conteudo {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.conteudo h1{
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+
+.conteudo p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-weight: 1.7;
+    font-size: 15px;
+}
+
+.conteudo img{
+    border: 1px solid white;
+}
+
+.inicio {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.inicio img{
+    width: 200px;
+    margin-right: -40px;
+}
+
+.inicio-meio {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.inicio-meio img{
+    width: 100px;
+    margin-left: -50px;
+}
+
+.meio-fim {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.meio-fim img{
+    width: 150px;
+    margin-right: -40px;
+}
+
+.fim {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.fim img{
+    width: 200px;
+    margin-left: -50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* FUTTER FIXO -----------------------------------------------------------*/
+
+.futter {
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px ;
+}
+
+.futter img {
+    width: 7%;
+    padding: 5px 0px 5px 10px;
+}
+
+.futter p {
+    font-family: "Coustard", serif;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.futter .logos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logos .github {
+    height: 100%;
+    width: 90px;
+}
+
+.github:hover {
+    cursor: pointer;
+}
+
+.logos .linkedin {
+    height: 100%;
+    width: 90px;
+}
+
+.linkedin:hover {
+    cursor: pointer;
+}
+
+.logos .email {
+    height: 100%;
+    width: 90px;
+}
+
+.email:hover {
+    cursor: pointer;
+}
+

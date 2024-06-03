@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Headland One", serif;
+    font-size: 15px;
+    line-height: 1.5;
+    font-style: normal;
+    color: white;
+}
+
+body {
+    background-color: #000000;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: black; 
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #CB0017; 
+}
+
+/* TOPO DA HEADER QUE É FIXA -----------------------------------------------------*/
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    backdrop-filter: blur(2px);
+}
+
+.barraVermelha {
+    width: 100%;
+    height: 10px;
+    background-color: #CB0017;
+}
+
+.barraBranca {
+    width: 100%;
+    height: 10px;
+    background-color: #FFFFFF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(#000000, transparent);
+    width: 100%;
+    height: 60px;
+    color: white;
+}
+
+.logo {
+    padding-left: 30px;
+    padding-top: 6px;
+}
+
+.textoUl a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.textoUl a:hover {
+    font-size: 1.3rem;
+    transition: .3s;
+}
+
+.textoUl li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.navbar img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.textoUl {
+    width: 800px;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button {
+    background-color: #ffffff00;
+    color: #fff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #CB0017  0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    margin-right: 20px;
+    
+  }
+  
+  .button:hover {
+    background-color: #CB0017;
+    cursor: pointer;
+  }
+  
+  .button svg {
+    align-items: center;
+    width: 1.8em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(5px);
+  }
+
+  .btn-cadastro {
+    width: 140px;
+  }
+  
+  .cadastro {
+    margin: 0 1.0em
+  }
+
+  .login {
+    margin: 0 1.8em
+  }
+
+  .header-red {
+    color: #CB0017;
+  }
+
+  /* CONTEUDO DA PAGINA ------------------------------------------------------- */
+
+  /* CARROSEL DO TOPO */
+
+
+  .carrossel{
+    /* margin-top: 15vh; */
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.carrosselConteudo{
+    width: 400%;
+    height: 40%;
+    display: flex;
+}
+
+.carrosselConteudo input, .img-desktop{
+    display: none;
+}
+
+.carrosselBox{
+    width: 25%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.carrosselBox img{
+    width: 100%;
+    height: auto;
+    background-position: top;
+}
+
+.navManual, .navAuto{
+    position: absolute;
+    width: 100%;
+    margin-top: 31%;
+    display: flex;
+    justify-content: center;
+}
+
+.navManual .manualBtn, .navAuto div{
+    border: 1px solid #D72327;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 170px;
+}
+
+.navManual .manualBtn:not(:last-child), .navAuto div:not(:last-child){
+    margin-right: 10px;
+
+}
+
+.navManual .manualBtn:hover{
+    background-color: #D72327;
+}
+
+#radio1:checked ~ .navAuto .autoBtn1, #radio2:checked ~ .navAuto .autoBtn2, #radio3:checked ~ .navAuto .autoBtn3{
+    background-color: #D72327;
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
+/* FIM DO CARROSSEL E INICIO DOS TEXTOS --------------------------------------------------- */
+
+.titulo {
+    display: flex;
+    font-size: 20px;
+    width: 100%;
+    padding: 70px 0 30px 0;
+    justify-content: center;
+    /* padding-left: 50%; */
+}
+
+.historia{
+    display: flex;
+    flex-direction: row;
+}
+
+.historia p{
+    font-size: 15px;
+    padding-right: 30px;
+}
+
+.historia img {
+    margin-left: 30px;
+    margin-right: 30px;
+    border: 1px solid white;
+}
+
+.estadio {
+    display: flex;
+    flex-direction: row;
+}
+.estadio img {
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: -10px;
+    border: 1px solid white;
+    width: 15%
+}
+
+.estadio p{
+    font-size: 15px;
+    margin-left: 30px;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: row;
+}
+
+.titulos img{
+    margin-left: 30px;
+    margin-right: 30px;
+    border: 1px solid white;
+}
+.titulos p{
+    font-size: 15px;
+    padding-right: 30px;
+}
+
+.rc {
+    width: 300px;
+    height: 300px;
+}
+
+/*  INICIO DO SEGUNDO CARROSEL ------------------------------------------------------------------- */
+
+.aumentar {
+    font-size: 40px;
+}
+
+.carrossel-card{
+    /* margin-top: 15vh; */
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.carrosselConteudo-card{
+    width: 500%;
+    height: 40%;
+    display: flex;
+}
+
+.carrosselConteudo-card input, .img-desktop{
+    display: none;
+}
+
+.carrosselBox-card{
+    width: 20%;
+    height: auto;
+    position: relative;
+    text-align: center;
+    transition: 1s;
+}
+
+.carrosselBox-card img{
+    width: 90%;
+    height: auto;
+    background-position: top;
+}
+
+.navManual-card, .navAuto-card{
+    position: absolute;
+    width: 100%;
+    margin-top: 540px;
+    display: flex;
+    justify-content: center;
+}
+
+.navManual-card .manualBtn-card, .navAuto-card div{
+    border: 1px solid #D72327;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: -20px;
+}
+
+.navManual-card .manualBtn-card:not(:last-child), .navAuto-card div:not(:last-child){
+    margin-right: 10px;
+
+}
+
+.navManual-card .manualBtn-card:hover{
+    background-color: #D72327;
+}
+
+#card1:checked ~ .navAuto-card .autoBtn1-card, #card2:checked ~ .navAuto-card .autoBtn2-card, #card3:checked ~ .navAuto-card .autoBtn3-card, #card4:checked ~ .navAuto-card .autoBtn4-card, #card5:checked ~ .navAuto-card .autoBtn5-card{
+    background-color: #D72327;
+}
+
+.red {
+    background-color: #D72327;
+}
+
+#card1:checked {
+    background-color: #D72327;
+}
+
+#card1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#card2:checked ~ .primeiro{
+    margin-left: -20%;
+}
+
+#card3:checked ~ .primeiro{
+    margin-left: -40%;
+}
+
+#card4:checked ~ .primeiro{
+    margin-left: -60%;
+}
+
+#card5:checked ~ .primeiro{
+    margin-left: -80%;
+}
+
+/* INICIO DO FUTTER ------------------------------------ */
+
+.futter-margin {
+    margin-top: 70px;
+}
+.barraVermelha {
+    width: 100%;
+    height: 10px;
+    background-color: #CB0017;
+}
+
+.barraBranca {
+    width: 100%;
+    height: 10px;
+    background-color: #FFFFFF;
+}
+
+.futter {
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px ;
+}
+
+.futter img {
+    width: 7%;
+    padding: 5px 0px 5px 10px;
+}
+
+.futter p {
+    font-family: "Coustard", serif;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.futter .logos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logos .github {
+    height: 100%;
+    width: 90px;
+}
+
+.github:hover {
+    cursor: pointer;
+}
+
+.logos .linkedin {
+    height: 100%;
+    width: 90px;
+}
+
+.linkedin:hover {
+    cursor: pointer;
+}
+
+.logos .email {
+    height: 100%;
+    width: 90px;
+}
+
+.email:hover {
+    cursor: pointer;
+}   

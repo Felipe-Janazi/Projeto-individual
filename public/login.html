@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/login.css">
+
+    <script src="js/login.js" defer></script>
+</head>
+
+<body>
+
+    <main>
+
+        <section class="login">
+
+            <a href="index.html" class="ancora">
+                <button class="cssbuttons-io-button">
+                    Voltar
+                    <div class="icon">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M7.828 13l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414L7.828 11H20v2z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </button>
+            </a>
+
+
+            <h1 class="titulo">Faça seu login</h1>
+
+            <div class="email">
+                <span> Email: </span>
+                <input placeholder="seuemail@gmail.com" id="input_email">
+            </div>
+
+
+            <div class="senha">
+                <span> Senha: </span>
+                <input type="password" placeholder="******************" id="input_senha">
+            </div>
+
+            <div class="login-btn">
+                <button class="btn red" onclick="entrar()">
+                    <span>Login</span>
+                </button>
+            </div>
+
+            <div id="div_erro"></div>
+
+            <div class="cadastro">
+                <span>
+                    <p>Ainda não possui cadastro?</p>
+                </span>
+                <a href="cadastro.html">
+                    <button class="btn black">
+                        <span>Cadastre-se</span>
+                    </button>
+                </a>
+                </div>
+        </section>
+
+        <section class="wallpaper">
+
+        </section>
+    </main>
+
+</body>
+
+</html>

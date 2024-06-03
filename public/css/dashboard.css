@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Headland One", serif;
+    font-size: 15px;
+    font-style: normal;
+}
+
+body {
+    background-image: url(../assets/dashboard.jpg);
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: start;
+    color: white;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: black; 
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #CB0017; 
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    backdrop-filter: blur(2px);
+}
+
+.barraVermelha {
+    width: 100%;
+    height: 10px;
+    background-color: #CB0017;
+}
+
+.barraBranca {
+    width: 100%;
+    height: 10px;
+    background-color: #FFFFFF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(#000000, transparent);
+    width: 100%;
+    height: 60px;
+    color: white;
+}
+
+.logo {
+    padding-left: 30px;
+    padding-top: 6px;
+}
+
+.textoUl a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    
+}
+
+.textoUl a:hover {
+    font-size: 1.3rem;
+    transition: .3s;
+}
+
+.textoUl li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.navbar img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.textoUl {
+    width: 800px;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 230px;
+}
+
+.kpi {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.gols {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(34, 31, 31, 0.7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gols p{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.assistencias {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(34, 31, 31, 0.7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.assistencias p{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.amarelos {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(34, 31, 31, 0.7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.amarelos p{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.vermelhos {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(34, 31, 31, 0.7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.vermelhos p{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.theBest {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(34, 31, 31, 0.7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.theBest p{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.titulos {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(34, 31, 31, 0.7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulos p{
+    padding-top: 10px;
+    font-size: 18px;
+}
+
+.grafico {
+    background-color: rgba(34, 31, 31, 0.7);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: start;
+    /* color: white; */
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.futter {
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px ;
+}
+
+.futter img {
+    width: 7%;
+    padding: 5px 0px 5px 10px;
+}
+
+.futter p {
+    font-family: "Coustard", serif;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.futter .logos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logos .github {
+    height: 100%;
+    width: 90px;
+}
+
+.github:hover {
+    cursor: pointer;
+}
+
+.logos .linkedin {
+    height: 100%;
+    width: 90px;
+}
+
+.linkedin:hover {
+    cursor: pointer;
+}
+
+.logos .email {
+    height: 100%;
+    width: 90px;
+}
+
+.email:hover {
+    cursor: pointer;
+}

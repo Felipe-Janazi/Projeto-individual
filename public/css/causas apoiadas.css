@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Headland One", serif;
+    font-size: 15px;
+    font-style: normal;
+    /* color: black; */
+    overflow: break-word;
+    color: white;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: black; 
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #CB0017; 
+}
+
+/* TOPO DA HEADER QUE É FIXA -----------------------------------------------------*/
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    backdrop-filter: blur(2px); 
+}
+
+.barraVermelha {
+    width: 100%;
+    height: 10px;
+    background-color: #CB0017;
+}
+
+.barraBranca {
+    width: 100%;
+    height: 10px;
+    background-color: #FFFFFF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(#000000, transparent);
+    width: 100%;
+    height: 60px;
+    color: white;
+}
+
+.logo {
+    padding-left: 30px;
+    padding-top: 6px;
+}
+
+.textoUl a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.textoUl a:hover {
+    font-size: 1.3rem;
+    transition: .3s;
+}
+
+.textoUl li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.navbar img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.textoUl {
+    width: 800px;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button {
+    background-color: #ffffff00;
+    color: #fff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #CB0017  0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    margin-right: 20px;
+    color: white;
+  }
+  
+  .button:hover {
+    background-color: #CB0017;
+    cursor: pointer;
+  }
+  
+  .button svg {
+    align-items: center;
+    width: 1.8em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(5px);
+  }
+
+  .btn-cadastro {
+    width: 140px;
+  }
+  
+  .cadastro {
+    margin: 0 1.0em
+  }
+
+  .login {
+    margin: 0 1.8em
+  }
+
+  .header-red {
+    color: #CB0017;
+  }
+
+  /* PARALLAX DO SITE --------------------------------------------------------------------- */
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    color:  white;
+  }
+
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    display: block;
+    background-color: white;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section.module p{
+    margin-bottom: 40px;
+}
+
+section .module:last-child {
+    margin-bottom: 0;
+}
+
+section.module h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+}
+
+section.module.content {
+    padding: 40px 0;
+    background-color: black;
+}
+
+section.module.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 500px !important;
+    width: 1315px;
+    position: relative;
+    overflow: hidden;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -moz-background-size: cover;
+
+}
+
+section.module.parallax:after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0;
+    background: -moz-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
+    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgba(0,0,0,0) 40%, #000 100%);
+}
+
+section.module.parallax-1{
+    background-image: url("../assets/logo_sp\ \(1\).png");
+    background-position: center;
+}
+
+section.module.parallax h1{
+    color: black;
+    text-align: center;
+    backdrop-filter: blur(2px); 
+    font-size: 70px;
+    z-index: 50;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.1px white;
+}
+
+section.module.parallax-2{
+    background-image: url("../assets/Racismo.png");
+    background-position: center;
+}
+
+section.module.parallax-3{
+    background-image: url("../assets/Parallax\ LGBTfobia.png");
+    background-position: center;
+}
+
+section.module.parallax-4{
+    background-image: url("../assets/apoio\ ao\ RS\ \(1\)\ \(1\).png");
+    background-position: center;
+}
+
+section.module.parallax-5{
+    background-image: url("../assets/Parallax\ combate\ ao\ abuso.png");
+    background-position: center;
+}
+
+section.module.parallax-6{
+    background-image: url("../assets/Coalização\ \(1\)\ \(1\).png");
+    background-position: center;
+}
+
+
+
+
+/* FUTTER FIXO -----------------------------------------------------------*/
+
+.futter {
+    display: flex;
+    justify-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px ;
+}
+
+.futter img {
+    width: 7%;
+    padding: 5px 0px 5px 10px;
+}
+
+.futter p {
+    font-family: "Coustard", serif;
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    padding-left: 20px;
+}
+
+.futter .logos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logos .github {
+    height: 100%;
+    width: 90px;
+}
+
+.github:hover {
+    cursor: pointer;
+}
+
+.logos .linkedin {
+    height: 100%;
+    width: 90px;
+}
+
+.linkedin:hover {
+    cursor: pointer;
+}
+
+.logos .email {
+    height: 100%;
+    width: 90px;
+}
+
+.email:hover {
+    cursor: pointer;
+}

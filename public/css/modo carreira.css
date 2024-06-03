@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Headland One", serif;
+    font-size: 15px;
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    background-image: url(../assets/Fundo\ carreira.jpg);
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+/* Estilo da barra de rolagem */
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+
+::-webkit-scrollbar-track {
+    background: black; 
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #CB0017; 
+}
+
+
+/* INICIO HEADER ------------------------------------------------------------------------ */
+
+.header {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    backdrop-filter: blur(2px);
+}
+
+.barraVermelha {
+    width: 100%;
+    height: 10px;
+    background-color: #CB0017;
+}
+
+.barraBranca {
+    width: 100%;
+    height: 10px;
+    background-color: #FFFFFF;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(#000000, transparent);
+    width: 100%;
+    height: 60px;
+    color: white;
+}
+
+.logo {
+    padding-left: 30px;
+    padding-top: 6px;
+}
+
+.textoUl a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+
+}
+
+.textoUl a:hover {
+    font-size: 1.3rem;
+    transition: .3s;
+}
+
+.textoUl li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.navbar img {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.textoUl {
+    width: 800px;
+    height: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button {
+    background-color: #ffffff00;
+    color: #fff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #CB0017  0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    margin-right: 20px;
+    
+  }
+  
+  .button:hover {
+    background-color: #CB0017;
+    cursor: pointer;
+  }
+  
+  .button svg {
+    align-items: center;
+    width: 1.8em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(5px);
+  }
+
+  .btn-cadastro {
+    width: 140px;
+  }
+  
+  .cadastro {
+    margin: 0 1.0em
+  }
+
+  .login {
+    margin: 0 1.8em
+  }
+
+  .header-red {
+    color: #CB0017;
+  }
+
+
+.container-simular{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+    width: 100%;
+    height: 600px;
+}
+
+.simular{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 600px;
+    /* font-size: 100px; */
+}
+
+.simular-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.apelido {
+    font-size: 25px;
+    margin-top:20px;
+
+}
+.apelido p{
+    margin-left: 300px;
+}
+
+input {
+    width: 300px;
+    border-radius: 7px;
+    background-color: rgba(251, 251, 252, 0.7);
+    border: 1px solid white;
+}
+
+select {
+    width: 300px;
+    border-radius: 7px;
+    background-color: rgba(251, 251, 252, 0.7);
+    border: 1px solid white;
+}
+
+.area {
+    margin-top:20px;
+    font-size: 25px;
+}
+.area p{
+    /* padding-bottom: -30px; */
+    margin-left: 300px;
+}
+
+.anos {
+    
+    font-size: 25px;
+    margin-top:20px;
+}
+.anos p{
+    margin-left: 300px;
+}
+
+.container-resposta {
+    display: flex;
+ align-items: center;
+ justify-content: center;
+    width: 100%;
+    height: 600px;
+}
+
+.comic-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #CB0017   ;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-top: 30px;
+  }
+  
+  .comic-button:hover {
+    background-color: #fff;
+    color: #CB0017;
+    border: 2px solid #000;
+    box-shadow: 5px 5px 0px #000;
+  }
+  
+  .comic-button:active {
+    background-color: #FFFFFF;
+    box-shadow: none;
+    transform: translateY(4px);
+  }
+
+.bloqueio{
+    border-radius: 20px;
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    z-index: 1000;
+}
+
+.bloqueio p{
+    font-size: 20px;
+    padding: 20px;
+}
+
+.bloqueio img{
+    width: 300px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.titulo {
+    font-size: 30px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.estastisticas {
+    /* margin-top: 80px; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.estastisticas p{
+    margin-top: 10px;
+}
+
+.gols {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    padding: 8px;
+
+}
+
+.assistencias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    padding: 13px;
+    
+}
+
+.assistencias p{
+    margin-top: 25px;
+}
+
+.cartaoAmarelo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.cartaoVermelho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.theBest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.titulos {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    flex-direction: row;
+}
+
+.paulista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.brasileirao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 8px;
+
+}
+
+.cdb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 8px;
+
+}
+
+.libertadores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 8px;
+
+}
+
+.mundial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.sula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 8px;
+
+}
+
+.recopa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 8px;
+}
+
+.supercopa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.copaDoMundo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(34, 31, 31, 0.7);
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin-left: 5px;
+    padding: 8px;
+
+}
+
+.botoes {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.botoes button{
+    width: 250px;
+    font-size: 20px;
+}

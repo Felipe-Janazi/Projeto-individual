@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo carreira</title>
+
+    <link rel="stylesheet" href="css/modo carreira.css">
+
+    <script src="js/modo carreira.js"></script>
+</head>
+
+<body onload="validarSessao()">
+
+    <div class="header">
+
+        <div class="barraVermelha"></div>
+
+        <div class="barraBranca"></div>
+
+        <div class="navbar">
+
+            <img src="assets/logo spfc.gif" alt="" class="logo">
+
+            <ul class="textoUl" id="textoUl">
+                <li> <a href="index.html">Início</a></li>
+                <li> <a href="historia.html">História</a></li>
+                <li><a href="causas apoiadas.html">Causas apoiadas </a></li>
+                <li><a href="minha historia.html">Minha história</a></li>
+                <li><a href="modo carreira.html"
+                        style="color: #ff001e; text-decoration-line: underline; transition: .3s; font-size: 1.3rem;">Modo
+                        carreira</a></li>
+            </ul>
+
+            <a href="login.html" id="botaoLogin">
+
+                <button class="button">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                    </svg>
+
+
+                    <div class="login"> Login </div>
+
+                </button>
+
+            </a>
+
+
+            <a href="cadastro.html" id="botaoCadastro">
+                <button class="button btn-cadastro">
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                    </svg>
+
+
+                    <div class="cadastro"> Cadastro </div>
+
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="container-simular">
+
+        <div class="simular">
+
+            <div class="simular-input" id="div_tudo">
+
+             <p class="apelido">Apelido do jogador: </p><br><input type="text" id="input_apelido">
+
+        <p class="area">Posição de jogo: </p> <br><select id="select_area">
+            <option value="#">Selecione sua posição</option>
+            <option value="goleiro">Goleiro</option>
+            <option value="zaga">Zaga</option>
+            <option value="meio-campo">Meio-campo</option>
+            <option value="ataque">Ataque</option>
+            <option value="tecnico">Técnico</option>
+        </select>
+
+        <p class="anos">Anos de atuação:</p> <br><input type="text" id="input_anos">
+
+        <button class="comic-button" onclick="simular()">Simular carreira</button>
+
+
+        
+    </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

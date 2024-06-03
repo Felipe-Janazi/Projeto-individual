@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Headland+One&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Headland One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.ancora {
+    text-decoration: none;
+}
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    height: 100VH;
+    background-color: white;
+}   
+
+.titulo {
+    margin-top: 60px;
+    font-size: 40px;
+}
+
+.email {
+    padding-top: 46px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.email span {
+    padding-right: 174px;
+    font-size: 24px;
+
+}
+
+.email input {
+    width: 50%;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    border: 1.5px solid grey;
+}
+
+.senha {
+    padding-top: 46px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.senha span {
+    padding-right: 165px;
+    font-size: 24px;
+}
+
+.senha input {
+    width: 50%;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    border: 1.5px solid grey;
+}
+
+.login-btn {
+    padding-top: 40px;
+}
+
+.cadastro {
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.cadastro p {
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+
+.cssbuttons-io-button {
+    background: #CB0017;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #CB0017;
+    overflow: hidden;
+    position: relative;
+    height: 1.8em;
+    padding-right: 2em;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 375px;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.2em;
+    width: 1.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #CB0017;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #CB0017;
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+  
+  .btn {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #3d405b;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+   }
+   
+   .btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   }
+   
+   .btn span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+   }
+   
+   .btn:hover span {
+    padding-right: 15px;
+   }
+   
+   .btn:hover span:after {
+    opacity: 1;
+    right: 0;
+   }
+
+   .red {
+    background-color: #CB0017;
+   }
+   
+   .black {
+    background-color: black;
+    color: white;
+    font-size: 15px;
+    width: 150px
+   }
+
+
+  /* Seção da foto */
+
+  .wallpaper {
+    width: 100%;
+    background-image: url(../assets/Rogério\ Ceni\ Goleiro\ Artilheiro.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex: 1;
+  }
+

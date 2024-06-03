@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+
+    <script src="js/cadastro.js"></script>
+</head>
+
+<body>
+    <main>
+
+        <section class="conteudo">
+
+            <a href="index.html " class="ancora">
+                <button class="cssbuttons-io-button">
+                    Voltar
+                    <div class="icon">
+                        <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M7.828 13l5.364 5.364-1.414 1.414L4 12l7.778-7.778 1.414 1.414L7.828 11H20v2z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </button>
+            </a>
+
+            <h1 class="titulo">Faça seu cadastro</h1>
+
+            <div class="email">
+                <span>Email:</span>  
+                <input id="input_email" placeholder="seuemail@email.com">
+            </div>
+
+            <div class="username">
+                <span>Username:</span>
+                <input id="input_username" placeholder="seu nome">
+            </div>
+
+            <div class="jogador">
+                <span>Jogador Preferido:</span>
+                <select id="select_jogador">
+                    <option value="#">Selecione um jogador</option>
+                    <option value="rogerio">Rogério Ceni</option>
+                    <option value="luis"> Luís Fabiano</option>
+                    <option value="lugano">Lugano</option>
+                    <option value="calleri">Calleri</option>
+                    <option value="nestor">Nestor</option>
+                    <option value="luciano">Luciano</option>
+                    <option value="rai">Raí</option>
+                    <option value="chulapa">Chulapa</option>
+                    <option value="outro">Outros</option>
+                </select>
+            </div>
+
+            <div class="senha">
+                <span>Senha:</span>
+                <input type="password" id="input_senha" placeholder="******************">
+            </div>
+
+            <div class="cadastro">
+                <button class="btn black" onclick="cadastrar()">
+                    <span>Cadastre-se</span>
+                </button>
+            </div>
+
+            <div id="div_erro">
+
+            </div>
+            <div class="login-btn">
+                <span>Já possui seu cadastro?</span>
+                <a href="login.html">
+                    <button class="btn red">
+                        <span>Login</span>
+                    </button>
+                </a>
+                </div>
+
+        </section>
+
+        <section class="wallpaper">
+
+
+
+        </section>
+    </main>
+</body>
+
+</html>

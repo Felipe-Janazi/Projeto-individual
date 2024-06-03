@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashbord</title>
+
+  <link rel="stylesheet" href="css/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script src="js/dashboard.js"></script>
+</head>
+
+<body onload="qtdGol()">
+
+
+  <div class="header">
+
+    <div class="barraVermelha"></div>
+
+    <div class="barraBranca"></div>
+
+    <div class="navbar">
+
+      <img src="assets/logo spfc.gif" alt="" class="logo">
+
+      <ul class="textoUl" id="textoUl">
+        <li> <a href="index.html">Início</a></li>
+        <li> <a href="historia.html">História</a></li>
+        <li><a href="causas apoiadas.html">Causas apoiadas </a></li>
+        <li><a href="minha historia.html">Minha história</a></li>
+        <li><a href="modo carreira.html"
+            style="color: #ff001e; text-decoration-line: underline; transition: .3s; font-size: 1.3rem;">Modo
+            carreira</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="kpi">
+
+    <div class="gols">
+      <p>O maior artilheiro é: </p>
+
+      <p id="maiorQtdGol"></p>
+
+    </div>
+
+    <div class="assistencias">
+      <p> O maior garçom é:</p>
+
+    </div>
+
+    <div class="amarelos">
+      <p>O mais agressivo é:</p>
+
+    </div>
+
+    <div class="vermelhos">
+      <p> O mais brigão é:</p>
+
+    </div>
+
+    <div class="theBest">
+      <p> O melhor jogador é:</p>
+
+    </div>
+
+    <div class="titulos">
+      <p> O maior pé quente é: </p>
+
+    </div>
+
+
+  </div>
+
+  <div class="grafico">
+    <canvas id="myChart" style=" height:500px; width:100%;"></canvas>
+  </div>
+
+  <div class="barraVermelha"></div>
+
+  <div class="barraBranca"></div>
+  <div class="futter">
+
+    <img src="assets/logo spfc.gif" alt="">
+
+    <p>O CLUBE ONDE A MOEDA CAI EM PÉ!</p>
+
+    <div class="logos">
+
+      <img src="assets/Github.png" alt="" class="github" onclick="github()">
+
+      <img src="assets/icons8-linkedin-96 (1).png" alt="" class="linkedin" onclick="linkedin()">
+
+      <img src="assets/Icon email.png" alt="" class="email" onclick="email()">
+
+    </div>
+
+  </div>
+</body>
+<script>
+
+  const labels = [
+    'Rogério Ceni',
+    'Luís Fabiano',
+    'Lugano',
+    'Calleri',
+    'Nestor',
+    'Luciano',
+    'Raí',
+    'Chulapa',
+    'Outros',
+  ];
+
+  const data = {
+    labels: labels,
+    datasets: [{
+      label: 'Média de favoritismo dos jogadores da história do SPFC',
+      data: [30, 29, 28, 25, 22, 23, 20, 15, 40],
+      backgroundColor: [
+        'rgb(182, 13, 13)',
+        'rgb(999, 999, 999)',
+        'rgb(0, 0, 0)',
+        'rgb(182, 13, 13)',
+        'rgb(999, 999, 999)',
+        'rgb(0, 0, 0)',
+        'rgb(182, 13, 13)',
+        'rgb(999, 999, 999)',
+        'rgb(0, 0, 0)',
+
+      ],
+      borderColor: [
+        'rgb(182, 13, 13)',
+        'rgb(999, 999, 999)',
+        'rgb(0, 0, 0)',
+        'rgb(182, 13, 13)',
+        'rgb(999, 999, 999)',
+        'rgb(0, 0, 0)',
+        'rgb(182, 13, 13)',
+        'rgb(999, 999, 999)',
+        'rgb(0, 0, 0)',
+      ],
+
+    }]
+
+  };
+
+  const config = {
+    type: 'bar',
+    data: data,
+    options: {}
+  }
+</script>
+
+<script>
+  const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  )
+</script>
+
+</html>
