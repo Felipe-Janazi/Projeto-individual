@@ -34,8 +34,22 @@ function cadastrarEstatisticas(id, gols, assistencias, amarelos, vermelhos, melh
     return database.executar(instrucaoSql);
 }
 
+
+function cadastrarTitulos(id,estaduais, brasileirao, cdb, libertadores, mundial, sula, recopa,supercopa, copa) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrarTitulos():", id,estaduais, brasileirao, cdb, libertadores, mundial, sula, recopa,supercopa, copa);
+    
+    // Insira exatamente a query do banco aqui, lembrando da nomenclatura exata nos valores
+    //  e na ordem de inserção dos dados.
+    var instrucaoSql = `
+        INSERT INTO Titulos (fkUsuario ,estaduais, brasileiroes, copaDoBrasil, libertadores, mundial, sulAmericana, recopa, supercopa, copaDoMundo) VALUES ('${id}','${estaduais}', '${brasileirao}', '${cdb}', '${libertadores}', '${mundial}', '${sula}', '${recopa}', '${supercopa}', '${copa}');
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 module.exports = {
     autenticar,
     cadastrar,
-    cadastrarEstatisticas
+    cadastrarEstatisticas,
+    cadastrarTitulos
 };

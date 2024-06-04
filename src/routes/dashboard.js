@@ -27,4 +27,8 @@ router.get("/ultimas/maistitulos", function (req, res) {
     dashboardController.maisTitulos(req, res);
 });
 
+router.get("/ultimas/grafico", function (req, res) {
+    dashboardController.grafico(req, res);
+});
+
 module.exports = router;

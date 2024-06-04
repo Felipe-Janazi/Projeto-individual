@@ -199,12 +199,46 @@ function maisTitulos() {
         resposta.json().then((resposta) => {
           console.log(resposta[0])
           nomePeQuente.innerHTML = resposta[0].username;
-          maiorQtdTitulo.innerHTML = resposta[0].totalTitulos;
+          maiorQtdTitulo.innerHTML = resposta[0].SomaDosTitulos;
         })
 
       } else {
         // alert ("Já existe este email cadastrado em nosso sistema!");
         throw "Houve um erro ao tentar pegar a maior quantidade de the best ";
+      }
+    })
+    .catch(function (resposta) {
+      console.log(`#ERRO: ${resposta}`);
+    });
+
+
+  return false;
+
+
+}
+
+function grafico() {
+
+  // Enviando o valor da nova input
+  fetch("/dashboard/ultimas/grafico", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    }
+  })
+    .then(function (resposta) {
+      console.log("resposta: ", resposta);
+
+      if (resposta.ok) {
+        resposta.json().then((resposta) => {
+          console.log(resposta[0])
+          nomeMelhor.innerHTML = resposta[0];
+          maiorQtdMelhor.innerHTML = resposta[0];
+        })
+
+      } else {
+        // alert ("Já existe este email cadastrado em nosso sistema!");
+        throw "Houve um erro ao tentar pegar os dados do grafico";
       }
     })
     .catch(function (resposta) {

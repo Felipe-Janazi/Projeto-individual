@@ -16,4 +16,8 @@ router.post("/cadastrarEstatisticas", function (req, res) {
     usuarioController.cadastrarEstatisticas(req, res);
 });
 
+router.post("/cadastrarTitulos", function (req, res) {
+    usuarioController.cadastrarTitulos(req, res);
+});
+
 module.exports = router;

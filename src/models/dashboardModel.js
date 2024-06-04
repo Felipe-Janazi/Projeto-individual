@@ -74,13 +74,27 @@ function melhorJogador() {
 
 function maisTitulos() {
 
-    var instrucaoSql = `select max(totalTitulos) as totalTitulos,
-    username
+    var instrucaoSql = `select sum(estaduais + brasileiroes + copaDoBrasil + libertadores + mundial + sulAmericana + recopa + supercopa + copaDoMundo) 
+    as SomaDosTitulos, idTitulos, username
     from Titulos join cadastroUsuario
-        on idUsuario = fkUsuario
-        group by username
-        order by totalTitulos desc
-        limit 1;`;
+    on idUsuario = fkUsuario
+    group by idTitulos, username
+    order by sum(estaduais + brasileiroes + copaDoBrasil + libertadores + mundial + sulAmericana + recopa + supercopa + copaDoMundo) desc
+    limit 1;`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
+function grafico() {
+
+    var instrucaoSql = `select sum(estaduais + brasileiroes + copaDoBrasil + libertadores + mundial + sulAmericana + recopa + supercopa + copaDoMundo) 
+    as SomaDosTitulos, idTitulos, username
+    from Titulos join cadastroUsuario
+    on idUsuario = fkUsuario
+    group by idTitulos, username
+    order by sum(estaduais + brasileiroes + copaDoBrasil + libertadores + mundial + sulAmericana + recopa + supercopa + copaDoMundo) desc
+    limit 1;`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
@@ -93,5 +107,6 @@ module.exports = {
     maxAmarelo, 
     maxVermelho,
     melhorJogador,
-    maisTitulos
+    maisTitulos,
+    grafico
 }

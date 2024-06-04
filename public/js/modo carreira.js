@@ -31,18 +31,21 @@ function simular() {
     // TODAS AS ESTASTISTICAS DOS GOLEIROS
     var premioTheBest = 0;
     var penaltis = 0;
-    
+
     // ESTASTISTICAS DOS JOGADORES DE LINHA
     var bolaDeOuro = 0;
-    
+
     // ESTASTATISTICAS DE TECNICO
     var theBestTecnico = 0;
-    
+
     // ESTASTISTICAS GERAIS
     var cartaoA = 0;
     var cartaoV = 0;
     var qtdGol = 0;
     var qtdAssistencia = 0;
+
+    // VARIAVEL PARA O TOTAL DE  TITULOS 
+    var totalTitulos;
 
     if (anos == '' || apelido == '' || area == '') {
 
@@ -227,6 +230,7 @@ function simular() {
 
             }
 
+
             lista_estatisticas.push(premioTheBest);
             lista_estatisticas.push(penaltis);
             lista_estatisticas.push(bolaDeOuro);
@@ -299,7 +303,7 @@ function simular() {
                 </div>
             </div>`;
             } else if (area == 'meio-campo') {
-                div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como goleiro</p>
+                div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como meio-campista</p>
                 
                 <div class="estastisticas">
 
@@ -330,7 +334,7 @@ function simular() {
                 </div>
             </div>`;
             } else if (area == 'ataque') {
-                div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como goleiro</p>
+                div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como atacante</p>
                 
                 <div class="estastisticas">
 
@@ -384,16 +388,18 @@ function simular() {
             }
 
 
-            
-            lista_titulos.push(qtdEstaduais);
-            lista_titulos.push(qtdBrasileirao);
-            lista_titulos.push(qtdCdb);
-            lista_titulos.push(qtdLibertadores);
-            lista_titulos.push(qtdMundial);
-            lista_titulos.push(qtdSula);
-            lista_titulos.push(qtdRecopa);
-            lista_titulos.push(qtdSupercopa);
-            lista_titulos.push(qtdCopa);
+
+            lista_titulos.push(Number(qtdEstaduais));
+            lista_titulos.push(Number(qtdBrasileirao));
+            lista_titulos.push(Number(qtdCdb));
+            lista_titulos.push(Number(qtdLibertadores));
+            lista_titulos.push(Number(qtdMundial));
+            lista_titulos.push(Number(qtdSula));
+            lista_titulos.push(Number(qtdRecopa));
+            lista_titulos.push(Number(qtdSupercopa));
+            lista_titulos.push(Number(qtdCopa));
+
+            totalTitulos += Number(qtdEstaduais + qtdBrasileirao + qtdCdb + qtdLibertadores + qtdMundial + qtdSula + qtdRecopa + qtdSupercopa + qtdCopa);
 
             div_tudo.innerHTML += `            <div class="titulos">
 
@@ -521,12 +527,12 @@ function voltar() {
 
 function validarSessao() {
 
-    var nome = sessionStorage.NOME_USUARIO; 
+    var nome = sessionStorage.NOME_USUARIO;
 
     if (nome != undefined) {
 
-        document.getElementById("botaoLogin").style.display="none";
-        document.getElementById("botaoCadastro").style.display="none";
+        document.getElementById("botaoLogin").style.display = "none";
+        document.getElementById("botaoCadastro").style.display = "none";
         document.getElementById("textoUl").style.marginRight = "230px";
     } else {
 
@@ -538,43 +544,84 @@ function validarSessao() {
         <p>Necessário realizar o login para jogar</p>
     </div>`;
     }
-    
+
 }
 
 function cadastrarEstatisticas() {
-var id = sessionStorage.ID_USUARIO;
+    var id = sessionStorage.ID_USUARIO;
     // Enviando o valor da nova input
     fetch("/usuarios/cadastrarEstatisticas", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        idServer: id,
-        golsServer: lista_estatisticas[6],
-        assistenciasServer: lista_estatisticas[7],
-        amarelosServer: lista_estatisticas[4],
-        vermelhoServer: lista_estatisticas[5],
-        melhorServer: lista_estatisticas[0]
-      }),
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idServer: id,
+            golsServer: lista_estatisticas[6],
+            assistenciasServer: lista_estatisticas[7],
+            amarelosServer: lista_estatisticas[4],
+            vermelhoServer: lista_estatisticas[5],
+            melhorServer: lista_estatisticas[0]
+        }),
     })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
 
-        if (resposta.ok) {
- 
+            if (resposta.ok) {
 
-        } else {
-          // alert ("Já existe este email cadastrado em nosso sistema!");
-          throw "Houve um erro ao tentar realizar o cadastro das estatisticas!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
+
+            } else {
+                throw "Houve um erro ao tentar realizar o cadastro das estatisticas!";
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
 
 
     return false;
-  }
+}
+
+function cadastrarTitulos() {
+    var id = sessionStorage.ID_USUARIO;
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrarTitulos", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            idServer: id,
+            estaduaisServer: lista_titulos[0],
+            brasileiraoServer: lista_titulos[1],
+            cdbServer: lista_titulos[2],
+            libertadoresServer: lista_titulos[3],
+            mundialServer: lista_titulos[4],
+            sulaServer: lista_titulos[5],
+            recopaServer: lista_titulos[6],
+            supercopaServer: lista_titulos[7],
+            copaServer: lista_titulos[8]
+            // titulosServer: totalTitulos
+        }),
+    })
+        .then(function (resposta) {
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+
+
+            } else {
+                throw "Houve um erro ao tentar realizar o cadastro das estatisticas!";
+            }
+        })
+        .catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+        });
+
+
+    return false;
+}

@@ -20,17 +20,17 @@ function autenticar(req, res) {
                     if (resultadoAutenticar.length == 1) {
                         console.log(resultadoAutenticar);
 
-                        
-                                
-                                    res.json({
-                                        id: resultadoAutenticar[0].idUsuario,
-                                        email: resultadoAutenticar[0].email,
-                                        nome: resultadoAutenticar[0].username,
-                                        senha: resultadoAutenticar[0].senha
-                                        // aquarios: resultadoAquarios
-                                    });
-                                
-                            
+
+
+                        res.json({
+                            id: resultadoAutenticar[0].idUsuario,
+                            email: resultadoAutenticar[0].email,
+                            nome: resultadoAutenticar[0].username,
+                            senha: resultadoAutenticar[0].senha
+                            // aquarios: resultadoAquarios
+                        });
+
+
                     } else if (resultadoAutenticar.length == 0) {
                         res.status(403).send("Email e/ou senha inválido(s)");
                     } else {
@@ -106,7 +106,7 @@ function cadastrarEstatisticas(req, res) {
         res.status(400).send("Seus vermelhos está indefinido!");
     } else if (melhor == undefined) {
         res.status(400).send("Seu melhor está indefinido!");
-    }  else if (id == undefined) {
+    } else if (id == undefined) {
         res.status(400).send("Seu id está indefinido!");
     } else {
 
@@ -129,8 +129,69 @@ function cadastrarEstatisticas(req, res) {
     }
 }
 
+function cadastrarTitulos(req, res) {
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+
+    var estaduais = req.body.estaduaisServer;
+    var brasileirao = req.body.brasileiraoServer;
+    var cdb = req.body.cdbServer;
+    var libertadores = req.body.libertadoresServer;
+    var mundial = req.body.mundialServer;
+    var sula = req.body.sulaServer;
+    var recopa = req.body.recopaServer;
+    var supercopa = req.body.supercopaServer;
+    var copa = req.body.copaServer;
+    var id = req.body.idServer;
+    // var titulos = req.body.titulosServer;
+
+    // Faça as validações dos valores
+    if (estaduais == undefined) {
+        res.status(400).send("Seus gols está indefinido!");
+    } else if (brasileirao == undefined) {
+        res.status(400).send("Suas assistencias está indefinida!");
+    } else if (cdb == undefined) {
+        res.status(400).send("Seus amarelos está indefinido!");
+    } else if (libertadores == undefined) {
+        res.status(400).send("Seus vermelhos está indefinido!");
+    } else if (mundial == undefined) {
+        res.status(400).send("Seu melhor está indefinido!");
+    } else if (sula == undefined) {
+        res.status(400).send("Seu melhor está indefinido!");
+    } else if (recopa == undefined) {
+        res.status(400).send("Seu melhor está indefinido!");
+    } else if (supercopa == undefined) {
+        res.status(400).send("Seu melhor está indefinido!");
+    } else if (copa == undefined) {
+        res.status(400).send("Seu melhor está indefinido!");
+    } else if (id == undefined) {
+        res.status(400).send("Seu id está indefinido!");
+    } else {
+    // } else if (titulos == undefined) {
+    //     res.status(400).send("Seu id está indefinido!");
+    // } else {
+
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.cadastrarTitulos(id,estaduais, brasileirao, cdb, libertadores, mundial, sula, recopa,supercopa, copa)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     autenticar,
     cadastrar,
-    cadastrarEstatisticas
+    cadastrarEstatisticas,
+    cadastrarTitulos
 }
