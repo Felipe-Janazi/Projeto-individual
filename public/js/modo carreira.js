@@ -3,6 +3,8 @@ var lista_titulos = [];
 var lista_estatisticas = [];
 
 function simular() {
+    lista_titulos = [];
+    lista_estatisticas = []
 
     // QUANTIDADE DE PARTIDAS E LESÕES QUE VOCÊ TEVE NA CARREIRA 
 
@@ -266,7 +268,7 @@ function simular() {
                 </div>
             </div>`;
             } else if (area == 'zaga') {
-                div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como goleiro</p>
+                div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira na zaga</p>
                 
                 <div class="estastisticas">
 
@@ -512,7 +514,7 @@ function voltar() {
 
     <p class="anos">Anos de atuação:</p> <br><input type="text" id="input_anos">
 
-    <button class="comic-button" onclick="simular()">Simular carreira</button>
+    <button class="comic-button" onclick="simular(), cadastrarEstatisticas()">Simular carreira</button>
 
 `;
 }
@@ -538,3 +540,41 @@ function validarSessao() {
     }
     
 }
+
+function cadastrarEstatisticas() {
+var id = sessionStorage.ID_USUARIO;
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrarEstatisticas", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        idServer: id,
+        golsServer: lista_estatisticas[6],
+        assistenciasServer: lista_estatisticas[7],
+        amarelosServer: lista_estatisticas[4],
+        vermelhoServer: lista_estatisticas[5],
+        melhorServer: lista_estatisticas[0]
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+ 
+
+        } else {
+          // alert ("Já existe este email cadastrado em nosso sistema!");
+          throw "Houve um erro ao tentar realizar o cadastro das estatisticas!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      });
+
+
+    return false;
+  }

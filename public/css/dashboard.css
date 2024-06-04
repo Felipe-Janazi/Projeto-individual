@@ -124,9 +124,26 @@ a {
     flex-direction: column;
 }
 
-.gols p{
+.kpiTitulo{
     padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
     font-size: 18px;
+}
+
+.nome{
+    padding-top: 30px;
+    font-size: 30px;
+    color: #CB0017;
+    -webkit-text-stroke: 1px black;
+}
+
+.estatistica{
+    padding-top: 20px;
+    font-size: 45px;
+    color: white;
+
 }
 
 .assistencias {
@@ -139,11 +156,6 @@ a {
     flex-direction: column;
 }
 
-.assistencias p{
-    padding-top: 10px;
-    font-size: 18px;
-}
-
 .amarelos {
     width: 200px;
     height: 200px;
@@ -152,11 +164,6 @@ a {
     display: flex;
     align-items: center;
     flex-direction: column;
-}
-
-.amarelos p{
-    padding-top: 10px;
-    font-size: 18px;
 }
 
 .vermelhos {
@@ -169,11 +176,6 @@ a {
     flex-direction: column;
 }
 
-.vermelhos p{
-    padding-top: 10px;
-    font-size: 18px;
-}
-
 .theBest {
     width: 200px;
     height: 200px;
@@ -184,10 +186,6 @@ a {
     flex-direction: column;
 }
 
-.theBest p{
-    padding-top: 10px;
-    font-size: 18px;
-}
 
 .titulos {
     width: 200px;
@@ -199,10 +197,6 @@ a {
     flex-direction: column;
 }
 
-.titulos p{
-    padding-top: 10px;
-    font-size: 18px;
-}
 
 .grafico {
     background-color: rgba(34, 31, 31, 0.7);

@@ -12,7 +12,7 @@
   <script src="js/dashboard.js"></script>
 </head>
 
-<body onload="maxGols()">
+<body onload="maxGols(), maxAssistencia(), maxAmarelo(), maxVermelho(), melhorJogador(), maisTitulos()">
 
 
   <div class="header">
@@ -41,34 +41,51 @@
   <div class="kpi">
 
     <div class="gols">
-      <p>O maior artilheiro é: </p>
 
-      <p id="maiorQtdGol"></p>
+      <p class="kpiTitulo">O maior artilheiro é: </p>
+
+      <p class="nome" id="nomeArtilheiro"></p>
+      <p class="estatistica" id="maiorQtdGol"></p>
 
     </div>
 
     <div class="assistencias">
-      <p> O maior garçom é:</p>
+      <p class="kpiTitulo">O maior garçom é: </p>
+
+      <p class="nome" id="nomeGarcom"></p>
+      <p class="estatistica" id="maiorQtdAssistencia"></p>
 
     </div>
 
     <div class="amarelos">
-      <p>O mais agressivo é:</p>
+      <p class="kpiTitulo">O mais agressivo é: </p>
+
+      <p class="nome" id="nomeAgressivo"></p>
+      <p class="estatistica" id="maiorQtdAmarelo"></p>
 
     </div>
 
     <div class="vermelhos">
-      <p> O mais brigão é:</p>
+      <p class="kpiTitulo">O mais brigão é: </p>
+
+      <p class="nome" id="nomeBrigao"></p>
+      <p class="estatistica" id="maiorQtdVermelho"></p>
 
     </div>
 
     <div class="theBest">
-      <p> O melhor jogador é:</p>
+      <p class="kpiTitulo">O melhor jogador é: </p>
+
+      <p class="nome" id="nomeMelhor"></p>
+      <p class="estatistica" id="maiorQtdMelhor"></p>
 
     </div>
 
     <div class="titulos">
-      <p> O maior pé quente é: </p>
+      <p class="kpiTitulo">O maior pé quente é: </p>
+
+      <p class="nome" id="nomePeQuente"></p>
+      <p class="estatistica" id="maiorQtdTitulo"></p>
 
     </div>
 
