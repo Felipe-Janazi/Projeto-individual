@@ -161,7 +161,7 @@ function graficoChulapa() {
 function graficoOutros() {
 
     var instrucaoSql = `select count(jogadorPreferido) as outros from cadastroUsuario
-    where jogadorPreferido = 'outros';`;
+    where jogadorPreferido = 'outro';`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
     return database.executar(instrucaoSql);
