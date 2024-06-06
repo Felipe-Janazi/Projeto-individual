@@ -52,6 +52,7 @@ a {
 }
 
 .email input {
+    border-radius: 10px;
     width: 50%;
     height: 30px;
     text-align: center;
@@ -74,6 +75,7 @@ a {
 }
 
 .senha input {
+    border-radius: 10px;
     width: 50%;
     height: 30px;
     text-align: center;

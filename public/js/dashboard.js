@@ -26,7 +26,7 @@ function maxGols() {
       if (resposta.ok) {
         resposta.json().then((resposta) => {
           console.log(resposta[0])
-          nomeArtilheiro.innerHTML = resposta[0].username;
+          nomeArtilheiro.innerHTML = resposta[0].apelido;
           maiorQtdGol.innerHTML = resposta[0].gols;
         })
 
@@ -62,7 +62,7 @@ function maxAssistencia() {
       if (resposta.ok) {
         resposta.json().then((resposta) => {
           console.log(resposta[0])
-          nomeGarcom.innerHTML = resposta[0].username;
+          nomeGarcom.innerHTML = resposta[0].apelido;
           maiorQtdAssistencia.innerHTML = resposta[0].assistencias;
         })
 
@@ -96,7 +96,7 @@ function maxAmarelo() {
       if (resposta.ok) {
         resposta.json().then((resposta) => {
           console.log(resposta[0])
-          nomeAgressivo.innerHTML = resposta[0].username;
+          nomeAgressivo.innerHTML = resposta[0].apelido;
           maiorQtdAmarelo.innerHTML = resposta[0].cartoesAmarelos;
         })
 
@@ -130,7 +130,7 @@ function maxVermelho() {
       if (resposta.ok) {
         resposta.json().then((resposta) => {
           console.log(resposta[0])
-          nomeBrigao.innerHTML = resposta[0].username;
+          nomeBrigao.innerHTML = resposta[0].apelido;
           maiorQtdVermelho.innerHTML = resposta[0].cartoesVermelhos;
         })
 
@@ -164,7 +164,7 @@ function melhorJogador() {
       if (resposta.ok) {
         resposta.json().then((resposta) => {
           console.log(resposta[0])
-          nomeMelhor.innerHTML = resposta[0].username;
+          nomeMelhor.innerHTML = resposta[0].apelido;
           maiorQtdMelhor.innerHTML = resposta[0].melhorDoMundo;
         })
 
@@ -198,7 +198,7 @@ function maisTitulos() {
       if (resposta.ok) {
         resposta.json().then((resposta) => {
           console.log(resposta[0])
-          nomePeQuente.innerHTML = resposta[0].username;
+          nomePeQuente.innerHTML = resposta[0].apelido;
           maiorQtdTitulo.innerHTML = resposta[0].SomaDosTitulos;
         })
 

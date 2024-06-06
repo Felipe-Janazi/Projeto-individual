@@ -1,5 +1,4 @@
 function entrar() {
-    // aguardar();
 
     var emailVar = input_email.value;
     var senhaVar = input_senha.value;
@@ -9,7 +8,7 @@ function entrar() {
         div_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
         finalizarAguardar();
         return false;
-    }
+    } else {
 
     console.log("FORM LOGIN: ", emailVar);
     console.log("FORM SENHA: ", senhaVar);
@@ -45,7 +44,7 @@ function entrar() {
             });
 
         } else {
-
+            alert ("Houve um erro ao logar, verifique se o email e senha estão corretos")
             console.log("Houve um erro ao tentar realizar o login!");
 
             resposta.text().then(texto => {
@@ -59,5 +58,6 @@ function entrar() {
     })
 
     return false;
+}
 }
 

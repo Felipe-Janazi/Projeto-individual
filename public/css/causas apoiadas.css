@@ -258,7 +258,75 @@ section.module.parallax-6{
     background-position: center;
 }
 
+.tudo_onu {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 
+.saude {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-weight: 1.4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.saude img{
+    width: 200px;
+}
+
+.saude p{
+    width: 300px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.igualdade {
+    padding-bottom: 60px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-weight: 1.4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.igualdade img{
+    width: 200px;
+}
+
+.igualdade p{
+    width: 300px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.paz {
+    padding-bottom: 42px;
+    padding-left: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    font-weight: 1.4px;
+    justify-content: center;
+    align-items: center;
+}
+
+.paz img{
+    width: 200px;
+}
+
+.paz p{
+    width: 300px;
+    padding-top: 30px;
+    text-align: center;
+}
 
 
 /* FUTTER FIXO -----------------------------------------------------------*/

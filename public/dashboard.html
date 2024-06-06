@@ -10,6 +10,9 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <script src="js/dashboard.js"></script>
+
+  <link rel="icon" href="assets/logo spfc.gif" type="image/x-icon">
+
 </head>
 
 <body onload="maxGols(), maxAssistencia(), maxAmarelo(), maxVermelho(), melhorJogador(), maisTitulos(), graficoRogerio()">
@@ -485,12 +488,34 @@ const data = {
 
   }]
 
-};
+}
 
 const config = {
   type: 'bar',
   data: data,
-  options: {}
+  options: {
+    scales: {
+  y: {
+    beginAtZero: true,
+    ticks:{
+      color: 'white'
+    }
+  },
+  x: {
+    ticks: {
+      color: 'white'
+    }
+  }
+}, 
+
+plugins: {
+legend: {
+labels: {
+color: 'white'
+}
+}
+}
+  }
 }
 const myChart = new Chart(
   document.getElementById('myChart'),

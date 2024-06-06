@@ -1,10 +1,12 @@
 // LISTAS UTILIZADAS
 var lista_titulos = [];
 var lista_estatisticas = [];
+var lista_nome = [];
 
 function simular() {
     lista_titulos = [];
     lista_estatisticas = []
+    lista_nome = [];
 
     // QUANTIDADE DE PARTIDAS E LESÕES QUE VOCÊ TEVE NA CARREIRA 
 
@@ -158,9 +160,9 @@ function simular() {
 
                 } else if (area == 'zaga') {
 
-                    var RbolaDeOuro = (Math.random() * 100).toFixed(0);
-                    if (RbolaDeOuro > 98) {
-                        bolaDeOuro++;
+                    var theBest = (Math.random() * 100).toFixed(0);
+                    if (theBest > 97) {
+                        premioTheBest++;
                     }
 
                     var RcartaoA = Number((Math.random() * 7).toFixed(0));
@@ -177,9 +179,9 @@ function simular() {
 
                 } else if (area == 'meio-campo') {
 
-                    var RbolaDeOuro = (Math.random() * 100).toFixed(0);
-                    if (RbolaDeOuro > 92) {
-                        bolaDeOuro++;
+                    var theBest = (Math.random() * 100).toFixed(0);
+                    if (theBest > 97) {
+                        premioTheBest++;
                     }
 
                     var RcartaoA = Number((Math.random() * 5).toFixed(0));
@@ -196,9 +198,9 @@ function simular() {
 
                 } else if (area == 'ataque') {
 
-                    var RbolaDeOuro = (Math.random() * 100).toFixed(0);
-                    if (RbolaDeOuro > 90) {
-                        bolaDeOuro++;
+                    var theBest = (Math.random() * 100).toFixed(0);
+                    if (theBest > 97) {
+                        premioTheBest++;
                     }
 
                     var RcartaoA = Number((Math.random() * 3).toFixed(0));
@@ -215,9 +217,9 @@ function simular() {
 
                 } else if (area == 'tecnico') {
 
-                    var RtheBestTecnico = (Math.random() * 100).toFixed(0);
-                    if (RtheBestTecnico > 95) {
-                        theBestTecnico++;
+                    var theBest = (Math.random() * 100).toFixed(0);
+                    if (theBest > 97) {
+                        premioTheBest++;
                     }
 
                     var RcartaoA = Number((Math.random() * 6).toFixed(0));
@@ -230,6 +232,7 @@ function simular() {
 
             }
 
+            lista_nome.push(apelido);
 
             lista_estatisticas.push(premioTheBest);
             lista_estatisticas.push(penaltis);
@@ -239,153 +242,7 @@ function simular() {
             lista_estatisticas.push(cartaoV);
             lista_estatisticas.push(qtdGol);
             lista_estatisticas.push(qtdAssistencia);
-
-            if (area == 'goleiro') {
-                div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como goleiro</p>
-                
-                <div class="estastisticas">
-
-                <div class="gols">
-                Gols
-                    <img src="assets/gols.webp" width="100px">
-                    <p>${lista_estatisticas[6]}</p>
-                </div>
-                <div class="assistencias">
-                Assistencias
-                    <img src="assets/assistencia.png" width="90px">
-                    <p> ${lista_estatisticas[7]}</p>
-                </div>
-                <div class="cartaoAmarelo">
-                Cartões
-                    <img src="assets/cartao amarelo.png" width="90px">
-                    <p>${lista_estatisticas[4]}</p>
-                </div>
-                <div class="cartaoVermelho">
-                Cartões
-                    <img src="assets/cartao vermelho.webp" width="90px">
-                    <p>${lista_estatisticas[5]}</p>
-                </div>
-                <div class="theBest">
-                Melhor jogador
-                    <img src="assets/bola de ouro.webp" width="90px">
-                    <p>${lista_estatisticas[0]}</p>
-                </div>
-            </div>`;
-            } else if (area == 'zaga') {
-                div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira na zaga</p>
-                
-                <div class="estastisticas">
-
-                <div class="gols">
-                Gols
-                    <img src="assets/gols.webp" width="100px">
-                    <p>${lista_estatisticas[6]}</p>
-                </div>
-                <div class="assistencias">
-                Assistencias
-                    <img src="assets/assistencia.png" width="90px">
-                    <p> ${lista_estatisticas[7]}</p>
-                </div>
-                <div class="cartaoAmarelo">
-                Cartões
-                    <img src="assets/cartao amarelo.png" width="90px">
-                    <p>${lista_estatisticas[4]}</p>
-                </div>
-                <div class="cartaoVermelho">
-                Cartões
-                    <img src="assets/cartao vermelho.webp" width="90px">
-                    <p>${lista_estatisticas[5]}</p>
-                </div>
-                <div class="theBest">
-                Melhor jogador
-                    <img src="assets/bola de ouro.webp" width="90px">
-                    <p>${lista_estatisticas[0]}</p>
-                </div>
-            </div>`;
-            } else if (area == 'meio-campo') {
-                div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como meio-campista</p>
-                
-                <div class="estastisticas">
-
-                <div class="gols">
-                Gols
-                    <img src="assets/gols.webp" width="100px">
-                    <p>${lista_estatisticas[6]}</p>
-                </div>
-                <div class="assistencias">
-                Assistencias
-                    <img src="assets/assistencia.png" width="90px">
-                    <p> ${lista_estatisticas[7]}</p>
-                </div>
-                <div class="cartaoAmarelo">
-                Cartões
-                    <img src="assets/cartao amarelo.png" width="90px">
-                    <p>${lista_estatisticas[4]}</p>
-                </div>
-                <div class="cartaoVermelho">
-                Cartões
-                    <img src="assets/cartao vermelho.webp" width="90px">
-                    <p>${lista_estatisticas[5]}</p>
-                </div>
-                <div class="theBest">
-                Melhor jogador
-                    <img src="assets/bola de ouro.webp" width="90px">
-                    <p>${lista_estatisticas[0]}</p>
-                </div>
-            </div>`;
-            } else if (area == 'ataque') {
-                div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como atacante</p>
-                
-                <div class="estastisticas">
-
-                <div class="gols">
-                Gols
-                    <img src="assets/gols.webp" width="100px">
-                    <p>${lista_estatisticas[6]}</p>
-                </div>
-                <div class="assistencias">
-                Assistencias
-                    <img src="assets/assistencia.png" width="90px">
-                    <p> ${lista_estatisticas[7]}</p>
-                </div>
-                <div class="cartaoAmarelo">
-                Cartões
-                    <img src="assets/cartao amarelo.png" width="90px">
-                    <p>${lista_estatisticas[4]}</p>
-                </div>
-                <div class="cartaoVermelho">
-                Cartões
-                    <img src="assets/cartao vermelho.webp" width="90px">
-                    <p>${lista_estatisticas[5]}</p>
-                </div>
-                <div class="theBest">
-                Melhor jogador
-                    <img src="assets/bola de ouro.webp" width="90px">
-                    <p>${lista_estatisticas[0]}</p>
-                </div>
-            </div>`;
-            } else if (area == 'tecnico') {
-                div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como técnico</p>
-                
-                <div class="estastisticas">
-                
-                <div class="cartaoAmarelo">
-                Cartões
-                    <img src="assets/cartao amarelo.png" width="90px">
-                    <p>${lista_estatisticas[4]}</p>
-                </div>
-                <div class="cartaoVermelho">
-                Cartões
-                    <img src="assets/cartao vermelho.webp" width="90px">
-                    <p>${lista_estatisticas[5]}</p>
-                </div>
-                <div class="theBest">
-                Melhor técnico
-                    <img src="assets/bola de ouro.webp" width="90px">
-                    <p>${lista_estatisticas[0]}</p>
-                </div>
-            </div>`;
-            }
+            
 
 
 
@@ -401,106 +258,7 @@ function simular() {
 
             totalTitulos += Number(qtdEstaduais + qtdBrasileirao + qtdCdb + qtdLibertadores + qtdMundial + qtdSula + qtdRecopa + qtdSupercopa + qtdCopa);
 
-            div_tudo.innerHTML += `            <div class="titulos">
-
-            <div class="paulista">
-
-                <p>${lista_titulos[0]}</p>
-                <img src="assets/paulista.png" alt="" width="125px">
-                <br>
-                Paulistas
-
-            </div>
-
-            <div class="brasileirao">
-
-                <p>${lista_titulos[1]}</p>
-
-                <img src="assets/brasileirao.png" alt="" width="100px">
-                <br>
-                Brasileirões
-            </div>
-
-            <div class="cdb">
-
-                <p>${lista_titulos[2]}</p>
-
-                <img src="assets/copa do brasil.png" alt="" width="100px">
-                <br>
-                Copa do Brasil
-
-            </div>
-
-            <div class="libertadores">
-
-                <p>${lista_titulos[3]}</p>
-
-                <img src="assets/libertadores.png" alt="" width="120px">
-                <br>
-                Libertadores
-
-            </div>
-
-            <div class="mundial">
-
-                <p>${lista_titulos[4]}</p>
-
-                <img src="assets/mundial.png" alt="" width="110px">
-                <br>
-                Mundial
-
-            </div>
-
-            <div class="sula">
-
-                <p>${lista_titulos[5]}</p>
-
-                <img src="assets/sulamericana.png" alt="" width="120px">
-                <br>
-                Sul-Americana
-
-            </div>
-
-            <div class="recopa">
-
-                <p>${lista_titulos[6]}</p>
-
-                <img src="assets/recopa.png" alt="" width="80px">
-                <br>
-                Recopa
-
-            </div>
-
-            <div class="supercopa">
-
-                <p>${lista_titulos[7]}</p>
-
-                <img src="assets/supercopa.png" alt="" width="140px">
-
-                <p>Supercopa</p>
-
-            </div>
-
-            <div class="copaDoMundo">
-
-                <p>${lista_titulos[8]}</p>
-
-                <img src="assets/copa do mundo.png" alt="" width="65px">
-                <br>
-                Copa do Mundo
-
-            </div>
-        </div>
-
-        <div class="botoes">
-
-            <button class="comic-button" onclick="voltar()">Simular novamente</button>
-
-            <a href="dashboard.html">
-            <button class="comic-button">Ranking</button>
-            </a>
-
-        </div>`;
+            cadastrarEstatisticas()
         }
     }
 }
@@ -548,8 +306,8 @@ function validarSessao() {
 }
 
 function cadastrarEstatisticas() {
-    var id = sessionStorage.ID_USUARIO;
-    // Enviando o valor da nova input
+    var id = sessionStorage.ID_USUARIO;  
+
     fetch("/usuarios/cadastrarEstatisticas", {
         method: "POST",
         headers: {
@@ -559,6 +317,7 @@ function cadastrarEstatisticas() {
             // crie um atributo que recebe o valor recuperado aqui
             // Agora vá para o arquivo routes/usuario.js
             idServer: id,
+            apelidoServer: lista_nome[0],
             golsServer: lista_estatisticas[6],
             assistenciasServer: lista_estatisticas[7],
             amarelosServer: lista_estatisticas[4],
@@ -572,7 +331,11 @@ function cadastrarEstatisticas() {
             if (resposta.ok) {
 
 
+                cadastrarTitulos()
+
+
             } else {
+                alert ("Apelido do jogador já existe em nosso sistema, necessário cadastrar novo apelido")
                 throw "Houve um erro ao tentar realizar o cadastro das estatisticas!";
             }
         })
@@ -586,7 +349,7 @@ function cadastrarEstatisticas() {
 
 function cadastrarTitulos() {
     var id = sessionStorage.ID_USUARIO;
-    // Enviando o valor da nova input
+
     fetch("/usuarios/cadastrarTitulos", {
         method: "POST",
         headers: {
@@ -596,6 +359,7 @@ function cadastrarTitulos() {
             // crie um atributo que recebe o valor recuperado aqui
             // Agora vá para o arquivo routes/usuario.js
             idServer: id,
+            apelidoServer: lista_nome[0],
             estaduaisServer: lista_titulos[0],
             brasileiraoServer: lista_titulos[1],
             cdbServer: lista_titulos[2],
@@ -613,8 +377,10 @@ function cadastrarTitulos() {
 
             if (resposta.ok) {
 
+                enviarModoCarreira()
 
             } else {
+                alert ("NOME REPETIDO")
                 throw "Houve um erro ao tentar realizar o cadastro das estatisticas!";
             }
         })
@@ -624,4 +390,264 @@ function cadastrarTitulos() {
 
 
     return false;
+}
+
+
+function enviarModoCarreira() {
+
+    var area = select_area.value;
+    var apelido = input_apelido.value;
+
+    if (area == 'goleiro') {
+        div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como goleiro</p>
+        
+        <div class="estastisticas">
+
+        <div class="gols">
+        Gols
+            <img src="assets/gols.webp" width="100px">
+            <p>${lista_estatisticas[6]}</p>
+        </div>
+        <div class="assistencias">
+        Assistencias
+            <img src="assets/assistencia.png" width="90px">
+            <p> ${lista_estatisticas[7]}</p>
+        </div>
+        <div class="cartaoAmarelo">
+        Cartões
+            <img src="assets/cartao amarelo.png" width="90px">
+            <p>${lista_estatisticas[4]}</p>
+        </div>
+        <div class="cartaoVermelho">
+        Cartões
+            <img src="assets/cartao vermelho.webp" width="90px">
+            <p>${lista_estatisticas[5]}</p>
+        </div>
+        <div class="theBest">
+        Melhor jogador
+            <img src="assets/bola de ouro.webp" width="90px">
+            <p>${lista_estatisticas[0]}</p>
+        </div>
+    </div>`;
+    } else if (area == 'zaga') {
+        div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira na zaga</p>
+        
+        <div class="estastisticas">
+
+        <div class="gols">
+        Gols
+            <img src="assets/gols.webp" width="100px">
+            <p>${lista_estatisticas[6]}</p>
+        </div>
+        <div class="assistencias">
+        Assistencias
+            <img src="assets/assistencia.png" width="90px">
+            <p> ${lista_estatisticas[7]}</p>
+        </div>
+        <div class="cartaoAmarelo">
+        Cartões
+            <img src="assets/cartao amarelo.png" width="90px">
+            <p>${lista_estatisticas[4]}</p>
+        </div>
+        <div class="cartaoVermelho">
+        Cartões
+            <img src="assets/cartao vermelho.webp" width="90px">
+            <p>${lista_estatisticas[5]}</p>
+        </div>
+        <div class="theBest">
+        Melhor jogador
+            <img src="assets/bola de ouro.webp" width="90px">
+            <p>${lista_estatisticas[0]}</p>
+        </div>
+    </div>`;
+    } else if (area == 'meio-campo') {
+        div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como meio-campista</p>
+        
+        <div class="estastisticas">
+
+        <div class="gols">
+        Gols
+            <img src="assets/gols.webp" width="100px">
+            <p>${lista_estatisticas[6]}</p>
+        </div>
+        <div class="assistencias">
+        Assistencias
+            <img src="assets/assistencia.png" width="90px">
+            <p> ${lista_estatisticas[7]}</p>
+        </div>
+        <div class="cartaoAmarelo">
+        Cartões
+            <img src="assets/cartao amarelo.png" width="90px">
+            <p>${lista_estatisticas[4]}</p>
+        </div>
+        <div class="cartaoVermelho">
+        Cartões
+            <img src="assets/cartao vermelho.webp" width="90px">
+            <p>${lista_estatisticas[5]}</p>
+        </div>
+        <div class="theBest">
+        Melhor jogador
+            <img src="assets/bola de ouro.webp" width="90px">
+            <p>${lista_estatisticas[0]}</p>
+        </div>
+    </div>`;
+    } else if (area == 'ataque') {
+        div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como atacante</p>
+        
+        <div class="estastisticas">
+
+        <div class="gols">
+        Gols
+            <img src="assets/gols.webp" width="100px">
+            <p>${lista_estatisticas[6]}</p>
+        </div>
+        <div class="assistencias">
+        Assistencias
+            <img src="assets/assistencia.png" width="90px">
+            <p> ${lista_estatisticas[7]}</p>
+        </div>
+        <div class="cartaoAmarelo">
+        Cartões
+            <img src="assets/cartao amarelo.png" width="90px">
+            <p>${lista_estatisticas[4]}</p>
+        </div>
+        <div class="cartaoVermelho">
+        Cartões
+            <img src="assets/cartao vermelho.webp" width="90px">
+            <p>${lista_estatisticas[5]}</p>
+        </div>
+        <div class="theBest">
+        Melhor jogador
+            <img src="assets/bola de ouro.webp" width="90px">
+            <p>${lista_estatisticas[0]}</p>
+        </div>
+    </div>`;
+    } else if (area == 'tecnico') {
+        div_tudo.innerHTML = `<p class="titulo">Olá ${apelido}, vamos ver como foi sua carreira como técnico</p>
+        
+        <div class="estastisticas">
+        
+        <div class="cartaoAmarelo">
+        Cartões
+            <img src="assets/cartao amarelo.png" width="90px">
+            <p>${lista_estatisticas[4]}</p>
+        </div>
+        <div class="cartaoVermelho">
+        Cartões
+            <img src="assets/cartao vermelho.webp" width="90px">
+            <p>${lista_estatisticas[5]}</p>
+        </div>
+        <div class="theBest">
+        Melhor técnico
+            <img src="assets/bola de ouro.webp" width="90px">
+            <p>${lista_estatisticas[0]}</p>
+        </div>
+    </div>`;
+    }
+
+
+
+
+
+    div_tudo.innerHTML += `            <div class="titulos">
+
+    <div class="paulista">
+
+        <p>${lista_titulos[0]}</p>
+        <img src="assets/paulista.png" alt="" width="125px">
+        <br>
+        Paulistas
+
+    </div>
+
+    <div class="brasileirao">
+
+        <p>${lista_titulos[1]}</p>
+
+        <img src="assets/brasileirao.png" alt="" width="100px">
+        <br>
+        Brasileirões
+    </div>
+
+    <div class="cdb">
+
+        <p>${lista_titulos[2]}</p>
+
+        <img src="assets/copa do brasil.png" alt="" width="100px">
+        <br>
+        Copa do Brasil
+
+    </div>
+
+    <div class="libertadores">
+
+        <p>${lista_titulos[3]}</p>
+
+        <img src="assets/libertadores.png" alt="" width="120px">
+        <br>
+        Libertadores
+
+    </div>
+
+    <div class="mundial">
+
+        <p>${lista_titulos[4]}</p>
+
+        <img src="assets/mundial.png" alt="" width="110px">
+        <br>
+        Mundial
+
+    </div>
+
+    <div class="sula">
+
+        <p>${lista_titulos[5]}</p>
+
+        <img src="assets/sulamericana.png" alt="" width="120px">
+        <br>
+        Sul-Americana
+
+    </div>
+
+    <div class="recopa">
+
+        <p>${lista_titulos[6]}</p>
+
+        <img src="assets/recopa.png" alt="" width="80px">
+        <br>
+        Recopa
+
+    </div>
+
+    <div class="supercopa">
+
+        <p>${lista_titulos[7]}</p>
+
+        <img src="assets/supercopa.png" alt="" width="140px">
+
+        <p>Supercopa</p>
+
+    </div>
+
+    <div class="copaDoMundo">
+
+        <p>${lista_titulos[8]}</p>
+
+        <img src="assets/copa do mundo.png" alt="" width="65px">
+        <br>
+        Copa do Mundo
+
+    </div>
+</div>
+
+<div class="botoes">
+
+    <button class="comic-button" onclick="voltar()">Simular novamente</button>
+
+    <a href="dashboard.html">
+    <button class="comic-button">Ranking</button>
+    </a>
+
+</div>`;
+
 }

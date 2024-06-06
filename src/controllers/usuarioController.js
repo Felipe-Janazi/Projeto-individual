@@ -88,6 +88,7 @@ function cadastrar(req, res) {
 function cadastrarEstatisticas(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
 
+    var apelido = req.body.apelidoServer;
     var gols = req.body.golsServer;
     var assistencias = req.body.assistenciasServer;
     var amarelos = req.body.amarelosServer;
@@ -97,6 +98,8 @@ function cadastrarEstatisticas(req, res) {
 
     // Faça as validações dos valores
     if (gols == undefined) {
+        res.status(400).send("Seus gols está indefinido!");
+    } else if (apelido == undefined) {
         res.status(400).send("Seus gols está indefinido!");
     } else if (assistencias == undefined) {
         res.status(400).send("Suas assistencias está indefinida!");
@@ -111,7 +114,7 @@ function cadastrarEstatisticas(req, res) {
     } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrarEstatisticas(id, gols, assistencias, amarelos, vermelhos, melhor)
+        usuarioModel.cadastrarEstatisticas(id, apelido, gols, assistencias, amarelos, vermelhos, melhor)
             .then(
                 function (resultado) {
                     res.json(resultado);
@@ -132,6 +135,7 @@ function cadastrarEstatisticas(req, res) {
 function cadastrarTitulos(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
 
+    var apelido = req.body.apelidoServer;
     var estaduais = req.body.estaduaisServer;
     var brasileirao = req.body.brasileiraoServer;
     var cdb = req.body.cdbServer;
@@ -148,6 +152,8 @@ function cadastrarTitulos(req, res) {
     if (estaduais == undefined) {
         res.status(400).send("Seus gols está indefinido!");
     } else if (brasileirao == undefined) {
+        res.status(400).send("Suas assistencias está indefinida!");
+    } else if (apelido == undefined) {
         res.status(400).send("Suas assistencias está indefinida!");
     } else if (cdb == undefined) {
         res.status(400).send("Seus amarelos está indefinido!");
@@ -171,7 +177,7 @@ function cadastrarTitulos(req, res) {
     // } else {
 
         // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
-        usuarioModel.cadastrarTitulos(id,estaduais, brasileirao, cdb, libertadores, mundial, sula, recopa,supercopa, copa)
+        usuarioModel.cadastrarTitulos(id, apelido, estaduais, brasileirao, cdb, libertadores, mundial, sula, recopa,supercopa, copa)
             .then(
                 function (resultado) {
                     res.json(resultado);

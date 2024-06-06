@@ -49,6 +49,7 @@ a {
 }
 
 .email input {
+    border-radius: 10px;
     width: 50%;
     height: 20px;
     text-align: center;
@@ -73,6 +74,7 @@ a {
 }
 
 .username input {
+    border-radius: 10px;
     width: 50%;
     height: 20px;
     text-align: center;
@@ -97,6 +99,7 @@ a {
 }
 
 .jogador select {
+    border-radius: 10px;
     width: 50%;
     height: 25px;
     text-align: center;
@@ -121,6 +124,7 @@ a {
 }
 
 .senha input {
+    border-radius: 10px;
     width: 50%;
     height: 20px;
     text-align: center;

@@ -48,12 +48,10 @@
 
           setTimeout(() => {
             window.location = "../Login.html";
-          }, "2000");
-
-          limparFormulario();
+          }, "1000");
 
         } else {
-          // alert ("Já existe este email cadastrado em nosso sistema!");
+          alert ("Já existe este email cadastrado em nosso sistema!");
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
       })
