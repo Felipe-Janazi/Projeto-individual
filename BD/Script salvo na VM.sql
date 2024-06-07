@@ -12,6 +12,45 @@ jogadorPreferido varchar(45)
 
 select * from cadastroUsuario;
 
+create table estatisticas (
+idEstatisticas int auto_increment,
+fkUsuario int,
+foreign key (fkUsuario) references cadastroUsuario (idUsuario),
+apelido varchar(45) unique,
+gols int,
+assistencias int,
+cartoesAmarelos int,
+cartoesVermelhos int,
+melhorDoMundo int,
+primary key (idEstatisticas, fkUsuario)
+);	
+
+select * from cadastroUsuario;
+select * from estatisticas;	
+select * from Titulos;
+
+truncate table cadastroUsuario;
+truncate table Titulos;
+truncate table estatisticas;
+
+create table Titulos (
+idTitulos int auto_increment,
+fkUsuario int,
+foreign key (fkUsuario) references cadastroUsuario(idUsuario),
+apelido varchar(45) unique,
+estaduais int,
+brasileiroes int, 
+copaDoBrasil int,
+libertadores int, 
+mundial int, 
+sulAmericana int,
+recopa int, 
+supercopa int, 
+copaDoMundo int,
+primary key (idTitulos, fkUsuario)
+);
+
+
 select count(jogadorPreferido) from cadastroUsuario
 where jogadorPreferido = 'rogerio';
 
@@ -39,65 +78,13 @@ where jogadorPreferido = 'chulapa';
 select count(jogadorPreferido) from cadastroUsuario
 where jogadorPreferido = 'outro';
 
-
-insert into cadastroUsuario values
-(null, 'Felipe', 'felipe@gmail', '12345', 'rogerio');
-
-insert into cadastroUsuario values
-(null, 'Gabriel', 'gabriel@gmail', '12345', 'rogerio');
-
-create table estatisticas (
-idEstatisticas int auto_increment,
-fkUsuario int,
-foreign key (fkUsuario) references cadastroUsuario (idUsuario),
-apelido varchar(45) unique,
-gols int,
-assistencias int,
-cartoesAmarelos int,
-cartoesVermelhos int,
-melhorDoMundo int,
-primary key (idEstatisticas, fkUsuario)
-);	
-
-select * from estatisticas;	
-select * from Titulos;
-
-truncate table Titulos;
-truncate table estatisticas;
-
-
-insert into estatisticas values
-(1, 1, 250, 200, 12, 23, 1);
-
-insert into estatisticas values
-(null, 1, 500, 200, 12, 23, 1);
-
-insert into estatisticas values
-(null, 2, 399, 250, 10, 25, 3);
-
-create table Titulos (
-idTitulos int auto_increment,
-fkUsuario int,
-foreign key (fkUsuario) references cadastroUsuario(idUsuario),
-apelido varchar(45) unique,
-estaduais int,
-brasileiroes int, 
-copaDoBrasil int,
-libertadores int, 
-mundial int, 
-sulAmericana int,
-recopa int, 
-supercopa int, 
-copaDoMundo int,
-totalTitulos int,
-primary key (idTitulos, fkUsuario)
-);
-
 select sum(estaduais + brasileiroes + copaDoBrasil + libertadores + mundial + sulAmericana + recopa + supercopa + copaDoMundo) 
-    as SomaDosTitulos, idTitulos, username
+    as SomaDosTitulos, 
+    idTitulos, 
+    apelido
     from Titulos join cadastroUsuario
     on idUsuario = fkUsuario
-    group by idTitulos, username
+    group by idTitulos, apelido
     order by sum(estaduais + brasileiroes + copaDoBrasil + libertadores + mundial + sulAmericana + recopa + supercopa + copaDoMundo) desc
     limit 1;
     
@@ -114,40 +101,39 @@ insert into Titulos values
 select * from cadastroUsuario;
 
 select max(gols),
-username 
-from estatisticas join cadastroUsuario
-on idUsuario = fkUsuario
-group by username;
+apelido 
+from estatisticas
+group by apelido, gols
+order by gols desc
+limit 1;
 
 select max(assistencias) as assistencias,
-    username 
-    from estatisticas join cadastroUsuario
-    on idUsuario = fkUsuario
-    group by username
+    apelido 
+    from estatisticas 
+    group by apelido, assistencias
     order by assistencias desc
     limit 1;
     
+    select * from estatisticas;
+    
 select max(cartoesAmarelos) as cartoesAmarelos,
-    username 
-    from estatisticas join cadastroUsuario
-    on idUsuario = fkUsuario
-    group by username
+    apelido 
+    from estatisticas 
+    group by apelido, cartoesAmarelos
     order by cartoesAmarelos desc
     limit 1;
     
     select max(cartoesVermelhos) as cartoesVermelhos,
-    username 
-    from estatisticas join cadastroUsuario
-    on idUsuario = fkUsuario
-    group by username
+    apelido 
+    from estatisticas
+    group by apelido, cartoesVermelhos
     order by cartoesVermelhos desc
     limit 1;
     
      select max(melhorDoMundo) as melhorDoMundo,
-    username 
-    from estatisticas join cadastroUsuario
-    on idUsuario = fkUsuario
-    group by username
+    apelido 
+    from estatisticas 
+    group by apelido, melhorDoMundo
     order by melhorDoMundo desc
     limit 1;
 
@@ -160,6 +146,7 @@ from Titulos join cadastroUsuario
     group by username
     order by totalTitulos desc
     limit 1;
+    
     
     select * from cadastroUsuario join estatisticas
     on idUsuario = estatisticas.fkUsuario

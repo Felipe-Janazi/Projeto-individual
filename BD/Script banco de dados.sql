@@ -10,8 +10,11 @@ senha varchar(45),
 jogadorPreferido varchar(45)
 );
 
-create table Estastisticas (
-idEstastisticas int auto_increment,
+insert into cadastroUsuario values
+(null, 'Felipe', 'felipe@gmail', '12345', 'rogerio');
+
+create table estatisticas (
+idEstatisticas int auto_increment,
 fkUsuario int,
 foreign key (fkUsuario) references cadastroUsuario (idUsuario),
 gols int,
@@ -19,8 +22,14 @@ assistencias int,
 cartoesAmarelos int,
 cartoesVermelhos int,
 melhorDoMundo int,
-primary key (idEstastisticas, fkUsuario)
+primary key (idEstatisticas, fkUsuario)
 );
+
+insert into estatisticas values
+(1, 1, 250, 200, 12, 23, 1);
+
+insert into estatisticas values
+(null, 1, 500, 200, 12, 23, 1);
 
 create table Titulos (
 idTitulos int auto_increment,
@@ -39,3 +48,9 @@ primary key (idTitulos, fkUsuario)
 );
 
 select * from cadastroUsuario;
+
+select max(gols),
+username 
+from estatisticas join cadastroUsuario
+on idUsuario = fkUsuario
+group by username;

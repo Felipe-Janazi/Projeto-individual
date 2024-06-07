@@ -103,8 +103,47 @@ a {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-right: 230px;
+    margin-right: -40px;
 }
+
+.button {
+    background-color: #ffffff00;
+    color: #fff;
+    width: 8.5em;
+    height: 2.9em;
+    border: #CB0017  0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
+    margin-right: 20px;
+    color: white;
+  }
+  
+  .button:hover {
+    background-color: #CB0017;
+    cursor: pointer;
+  }
+  
+  .button svg {
+    align-items: center;
+    width: 1.8em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+  }
+  
+  .button:hover svg {
+    transform: translateX(5px);
+  }
+
+  .btn-cadastro {
+    width: 140px;
+  }
+
+  .cadastro {
+    margin-right: 40px;
+  }
 
 .kpi {
     width: 100%;
@@ -134,7 +173,7 @@ a {
 
 .nome{
     padding-top: 30px;
-    font-size: 30px;
+    font-size: 25px;
     color: #f80626;
     text-transform: uppercase;
     /* -webkit-text-stroke: 1px black; */
@@ -142,8 +181,9 @@ a {
 
 .estatistica{
     padding-top: 20px;
-    font-size: 45px;
+    font-size: 35px;
     color: white;
+    padding-bottom: 10px;
 
 }
 

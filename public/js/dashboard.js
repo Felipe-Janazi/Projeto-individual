@@ -9,6 +9,11 @@ function linkedin() {
 function email() {
   window.open("mailto:felipe.janazi@sptech.school", "_blank")
 }
+
+function sair() {
+  sessionStorage.clear()
+  window.location = '../index.html'
+}
 // PEGANDO A MAIOR QUANTIDADE DE GOLS 
 
 function maxGols() {
