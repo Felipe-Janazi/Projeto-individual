@@ -152,3 +152,7 @@ from Titulos join cadastroUsuario
     on idUsuario = estatisticas.fkUsuario
     join Titulos 
     on idUsuario = Titulos.fkUsuario;
+    
+    
+    select * from estatisticas;
+update estatisticas set apelido = 'Victor' where idEstatisticas = 7;

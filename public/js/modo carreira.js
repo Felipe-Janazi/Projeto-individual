@@ -305,6 +305,7 @@ function validarSessao() {
 
 }
 
+
 function cadastrarEstatisticas() {
     var id = sessionStorage.ID_USUARIO;  
 
