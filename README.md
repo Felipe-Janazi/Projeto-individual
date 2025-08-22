@@ -44,8 +44,9 @@
   <li>Guia de instalação e execução</li>
 </ul>
 
+<h2 align="center">👨‍💻 Autor</h2>
+
 <p align="center">
-<h2>👨‍💻 Autor</h2>
 Desenvolvido por <b>Felipe Janazi</b><br/>
 📌 Projeto de conclusão do <b>1º semestre</b><br/>
 📅 Duração: <b>2 meses</b><br/>
