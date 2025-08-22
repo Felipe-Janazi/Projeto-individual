@@ -1,11 +1,16 @@
-<h1>🏆 Projeto Individual – São Paulo Futebol Clube</h1>
+<h1 align="center">🏆 Projeto Individual – São Paulo Futebol Clube</h1>
 
-<p>
-Este é meu <b>projeto individual de conclusão do primeiro semestre</b>, desenvolvido em <b>2 meses</b> como parte da minha jornada acadêmica em tecnologia.
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-orange?logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-blue?logo=css3&logoColor=white" />
+  <img src="https://img.shields.io/badge/JavaScript-yellow?logo=javascript&logoColor=black" />
+  <img src="https://img.shields.io/badge/Node.js-green?logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-blue?logo=mysql&logoColor=white" />
 </p>
 
-<p>
-O tema escolhido foi o <b>São Paulo Futebol Clube</b>, explorando conceitos de <b>front-end, back-end, banco de dados, APIs e documentação</b>.
+<p align="center">
+  <i>Projeto de conclusão do 1º semestre - Tema: São Paulo Futebol Clube</i><br/>
+  <b>Duração:</b> 2 meses
 </p>
 
 <hr/>
@@ -119,8 +124,12 @@ Toda a documentação está disponível na pasta <b><code>docs/</code></b>, incl
 <hr/>
 
 <h2>👨‍💻 Autor</h2>
-<p>
-Desenvolvido por <b>Felipe Janazi</b> – Projeto de conclusão do <b>1º semestre</b><br/>
-📌 Tema: <b>São Paulo Futebol Clube</b><br/>
-📅 Duração: <b>2 meses</b>
+<p align="center">
+Desenvolvido por <b>Felipe Janazi</b><br/>
+📌 Projeto de conclusão do <b>1º semestre</b><br/>
+📅 Duração: <b>2 meses</b><br/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Projeto-SPFC-red?logo=sao-paulo-fc&logoColor=white" />
 </p>
