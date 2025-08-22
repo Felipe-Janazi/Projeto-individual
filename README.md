@@ -21,7 +21,7 @@ O tema escolhido foi o <b>São Paulo Futebol Clube</b>, explorando conceitos de 
 
 <h3>⚙️ Back-end</h3>
 <ul>
-  <li><b>Node.js</b> (API construída do zero)</li>
+  <li><b>Node.js</b></li>
 </ul>
 
 <h3>🗄️ Banco de Dados</h3>
